@@ -1,0 +1,17 @@
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 var(--sp-2);
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tag-badge--category { background: var(--butter-yellow); color: #5A4E00; }
+.tag-badge--season { background: var(--lavender); color: var(--deep-plum); }
+.tag-badge--style { background: var(--blush-pink); color: #6B1A2E; }
+.tag-badge--thrift { background: var(--mint); color: #1F5C43; }

@@ -1,0 +1,51 @@
+.history-page {
+  padding: var(--sp-4) var(--sp-5) var(--sp-6);
+  max-width: 760px;
+}
+
+.history-page h1 { font-size: 28px; margin-bottom: var(--sp-4); }
+
+.history-list { display: flex; flex-direction: column; gap: var(--sp-3); }
+
+.history-card {
+  background: var(--soft-yellow);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+}
+
+.history-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.history-card-occasion { font-weight: 700; font-size: 15px; }
+.history-card-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+.history-card-delete { font-size: 12px; color: #6B1A2E; font-weight: 600; }
+.history-card-delete:hover { text-decoration: underline; }
+
+.history-card-thumbs {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  margin-top: var(--sp-3);
+}
+
+.history-thumb { width: 32px; height: 32px; border-radius: 8px; }
+
+.history-card-toggle {
+  margin-top: var(--sp-3);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--deep-plum);
+}
+
+.history-card-details {
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--warm-gray);
+  font-size: 14px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.history-card-caption { font-style: italic; color: var(--deep-plum); }

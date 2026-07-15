@@ -1,0 +1,42 @@
+.fit-card {
+  background: linear-gradient(160deg, var(--deep-plum) 0%, #2a1132 100%);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4);
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  box-shadow: var(--shadow-modal);
+}
+
+.fit-card-swatches {
+  display: flex;
+  margin-left: 6px;
+}
+
+.fit-card-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--deep-plum);
+  margin-left: -14px;
+}
+
+.fit-card-caption {
+  font-family: var(--font-section);
+  font-size: 17px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.fit-card-hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1) var(--sp-2);
+}
+
+.fit-card-hashtag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--butter-yellow);
+}

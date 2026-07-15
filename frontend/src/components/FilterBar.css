@@ -1,0 +1,25 @@
+.filter-bar {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  height: 34px;
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--soft-yellow);
+  border: 1px solid var(--warm-gray);
+  color: #555;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filter-pill:hover { background: var(--warm-gray); }
+
+.filter-pill--active {
+  background: var(--warm-black);
+  color: var(--butter-yellow);
+  border-color: var(--warm-black);
+}

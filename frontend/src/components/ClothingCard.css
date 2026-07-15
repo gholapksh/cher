@@ -1,0 +1,86 @@
+.clothing-card {
+  position: relative;
+  background: var(--soft-yellow);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clothing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 22px rgba(245, 230, 66, 0.4);
+}
+
+.clothing-card--selected { outline: 2.5px solid var(--warm-black); }
+
+.clothing-card-image {
+  height: 180px;
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.clothing-card-info { padding: 12px 16px 16px; }
+
+.clothing-card-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--warm-black);
+  margin-bottom: var(--sp-2);
+}
+
+.clothing-card-tags {
+  display: flex;
+  gap: var(--sp-1);
+  flex-wrap: wrap;
+}
+
+.clothing-card-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--warm-black);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.clothing-card:hover .clothing-card-delete { opacity: 1; }
+
+.clothing-card-thrift-flag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--mint);
+  color: #1F5C43;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  z-index: 2;
+}
+
+.clothing-card-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--butter-yellow);
+  color: var(--warm-black);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}

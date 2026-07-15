@@ -1,0 +1,21 @@
+.wardrobe-page {
+  padding: var(--sp-4) var(--sp-5) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.wardrobe-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wardrobe-topbar h1 { font-size: 28px; }
+
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-4);
+  margin-top: var(--sp-2);
+}

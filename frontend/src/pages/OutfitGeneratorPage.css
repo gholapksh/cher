@@ -1,0 +1,82 @@
+.generator-page {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: var(--sp-5);
+  padding: var(--sp-4) var(--sp-5) var(--sp-6);
+}
+
+.generator-page h1 { font-size: 28px; margin-bottom: var(--sp-1); }
+.generator-sub { color: #888; font-size: 14px; margin-bottom: var(--sp-4); }
+
+.generator-textarea {
+  width: 100%;
+  height: 160px;
+  background: var(--soft-yellow);
+  border: 1.5px solid var(--warm-gray);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  font-size: 15px;
+  resize: vertical;
+  margin-bottom: var(--sp-2);
+}
+
+.generator-suggestions { display: flex; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-3); }
+
+.generator-suggestion-chip {
+  background: var(--soft-yellow);
+  border: 1px solid var(--warm-gray);
+  border-radius: var(--r-pill);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.generator-suggestion-chip:hover { background: var(--warm-gray); }
+
+.generator-agent-panel { margin-top: var(--sp-5); }
+
+.generator-agent-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: var(--sp-2);
+}
+
+.generator-right { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.generator-placeholder {
+  border: 2px dashed var(--warm-gray);
+  border-radius: var(--r-lg);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  color: #888;
+  font-size: 14px;
+}
+
+.generator-placeholder-icon { font-size: 40px; }
+.generator-placeholder-icon--spin { animation: spin 1.8s linear infinite; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.generator-stopped {
+  background: #FDF1F4;
+  border: 1.5px solid var(--blush-pink);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  align-items: flex-start;
+}
+
+.generator-stopped-title { font-weight: 700; font-size: 16px; }
+.generator-stopped p { font-size: 14px; color: var(--warm-black); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .generator-page { grid-template-columns: 1fr; }
+}

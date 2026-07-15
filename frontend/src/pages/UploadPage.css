@@ -1,0 +1,98 @@
+.upload-page {
+  display: flex;
+  justify-content: center;
+  padding: var(--sp-6) var(--sp-4);
+}
+
+.upload-card {
+  width: 640px;
+  max-width: 100%;
+  background: white;
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-modal);
+}
+
+.upload-card h2 { font-size: 32px; }
+.upload-sub { color: #888; font-size: 14px; margin: 4px 0 var(--sp-4); }
+
+.upload-dropzone {
+  height: 160px;
+  border: 2px dashed rgba(0,0,0,0.15);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-3);
+}
+
+.upload-dropzone span {
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.75);
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+}
+
+.upload-swatch-row { display: flex; gap: var(--sp-2); margin: var(--sp-3) 0 var(--sp-4); }
+
+.upload-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.upload-swatch--active { border-color: var(--warm-black); }
+
+.upload-field { margin-bottom: var(--sp-3); display: flex; flex-direction: column; gap: 6px; }
+
+.upload-field-row { display: flex; gap: var(--sp-3); }
+.upload-field-row .upload-field { flex: 1; }
+
+.upload-field label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.upload-field input, .upload-field select {
+  height: 48px;
+  background: var(--soft-yellow);
+  border: 1.5px solid var(--warm-gray);
+  border-radius: var(--r-sm);
+  padding: 0 var(--sp-3);
+  font-size: 14px;
+}
+
+.upload-chip-row { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+
+.upload-chip {
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
+  background: var(--soft-yellow);
+  border: 1px solid var(--warm-gray);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.upload-chip--active { background: var(--butter-yellow); border-color: var(--butter-yellow); }
+
+.upload-tag-row { display: flex; gap: var(--sp-2); flex-wrap: wrap; margin-top: var(--sp-2); }
+
+.upload-tag {
+  background: var(--blush-pink);
+  color: #6B1A2E;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 6px 5px 12px;
+  border-radius: var(--r-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.upload-tag button { color: #6B1A2E; font-size: 11px; }

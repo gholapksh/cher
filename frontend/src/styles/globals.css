@@ -1,0 +1,117 @@
+:root {
+  /* Colors */
+  --butter-yellow: #F5E642;
+  --cream: #FFFDF0;
+  --soft-yellow: #FAF3C0;
+  --warm-black: #1A1A1A;
+  --blush-pink: #F2A7BB;
+  --mint: #A8E6CF;
+  --lavender: #C9B8F0;
+  --warm-gray: #E8E4D9;
+  --deep-plum: #3D1A47;
+  --text-muted: #6b6558;
+
+  /* Type */
+  --font-display: "Playfair Display", serif;
+  --font-section: "DM Serif Display", serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Spacing (8pt grid) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+  --sp-6: 48px;
+  --sp-7: 64px;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0px 4px 16px rgba(245, 230, 66, 0.25);
+  --shadow-modal: 0px 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-btn-hover: 0px 4px 12px rgba(245, 230, 66, 0.5);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--warm-black);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { min-height: 100vh; }
+
+#root { min-height: 100vh; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2.5px solid var(--deep-plum);
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--butter-yellow);
+  color: var(--warm-black);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--warm-black);
+}
+
+p { margin: 0; }
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Reusable eyebrow label */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--deep-plum);
+}
+
+/* Scrollbar - subtle */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--warm-gray); border-radius: var(--r-pill); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
