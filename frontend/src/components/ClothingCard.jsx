@@ -14,7 +14,18 @@ export default function ClothingCard({ item, source = "owned", onDelete, selecte
     <div className={`clothing-card${selected ? " clothing-card--selected" : ""}`}>
       {source === "listing" && <span className="clothing-card-thrift-flag">found on thrift ✦</span>}
       {selected && <span className="clothing-card-check">✓</span>}
-      <div className="clothing-card-image" style={{ background: item.swatch || "#E8E4D9" }} />
+      {item.imageUrl ? (
+        <div
+          className="clothing-card-image"
+          style={{
+            backgroundImage: `url(${item.imageUrl})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      ) : (
+        <div className="clothing-card-image" style={{ background: item.swatch || "#E8E4D9" }} />
+      )}
       {onDelete && (
         <button className="clothing-card-delete" onClick={() => onDelete(item.id)} aria-label={`Remove ${name}`}>
           ✕

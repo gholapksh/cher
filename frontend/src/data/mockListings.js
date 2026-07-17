@@ -1,13 +1,52 @@
-// Mock dataset of 40 secondhand thrift listings — mirrors the FitFindr
-// search_listings tool's dataset. Swap for a real ThriftListing table
-// once this is wired to the backend.
-
 const swatches = {
   blue: "#5B7CA3", black: "#232323", red: "#B94A48", brown: "#8A5A3C",
   gold: "#D9B24C", navy: "#243A5E", champagne: "#E7D9B0", white: "#F4F4F0",
   tan: "#C7A97A", cream: "#EFE6CF", olive: "#767A4B", gray: "#9A968C",
   multi: "#C9B8F0", beige: "#D8CBB0", pink: "#F2A7BB", khaki: "#B7AE85",
   silver: "#C7C7C7", nude: "#D9B99A", floral: "#E3A6B0", "light wash": "#A9C0D9",
+};
+
+const imageMap = {
+  1: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=500&q=80",
+  2: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=500&q=80",
+  3: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&q=80",
+  4: "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=500&q=80",
+  5: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80",
+  6: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=500&q=80",
+  7: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&q=80",
+  8: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
+  9: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&q=80",
+  10: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=80",
+  11: "https://images.unsplash.com/photo-1574164904299-3a102b110380?w=500&q=80",
+  12: "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?w=500&q=80",
+  13: "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=500&q=80",
+  14: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80",
+  15: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80",
+  16: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&q=80",
+  17: "https://images.unsplash.com/photo-1591348278863-a8fb3887e2ac?w=500&q=80",
+  18: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=500&q=80",
+  19: "https://images.unsplash.com/photo-1576871337622-98d48d4aa53e?w=500&q=80",
+  20: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80",
+  21: "https://images.unsplash.com/photo-1548624149-f7b2e650d51a?w=500&q=80",
+  22: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500&q=80",
+  23: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&q=80",
+  24: "https://images.unsplash.com/photo-1624222247344-550fb8ef94d4?w=500&q=80",
+  25: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80",
+  26: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&q=80",
+  27: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500&q=80",
+  28: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&q=80",
+  29: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80",
+  30: "https://images.unsplash.com/photo-1584865288642-42078afe6942?w=500&q=80",
+  31: "https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?w=500&q=80",
+  32: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=500&q=80",
+  33: "https://images.unsplash.com/photo-1576871337642-8c87499799ac?w=500&q=80",
+  34: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&q=80",
+  35: "https://images.unsplash.com/photo-1506152983158-b4a74a01c721?w=500&q=80",
+  36: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&q=80",
+  37: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80",
+  38: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=500&q=80",
+  39: "https://images.unsplash.com/photo-1517423568366-8b83523034fd?w=500&q=80",
+  40: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=500&q=80",
 };
 
 export const listings = [
@@ -51,6 +90,10 @@ export const listings = [
   { id: 38, title: "Mary Jane Flats", category: "shoes", size: "7", price: 23, color: "black", tags: ["preppy", "office"] },
   { id: 39, title: "Utility Cargo Pants", category: "bottom", size: "M", price: 25, color: "olive", tags: ["streetwear", "casual"] },
   { id: 40, title: "Satin Scrunchie Set", category: "accessory", size: "OS", price: 5, color: "multi", tags: ["everyday", "y2k"] },
-].map((item) => ({ ...item, swatch: swatches[item.color] || "#C9B8F0" }));
+].map((item) => ({ 
+  ...item, 
+  swatch: swatches[item.color] || "#C9B8F0",
+  imageUrl: imageMap[item.id] || null 
+}));
 
 export const CATEGORIES = ["top", "bottom", "shoes", "accessory", "outerwear"];
